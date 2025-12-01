@@ -1,5 +1,6 @@
 
   {
+      "homepage": "https://yuhan-inaba.github.io/Onlineportfolio",
       "name": "Minimalist Dark Portfolio Website",
       "version": "0.1.0",
       "private": true,
@@ -55,6 +56,9 @@
       },
       "scripts": {
           "dev": "vite",
-          "build": "vite build"
+          "build": "vite build",
+          "preview": "vite preview",
+          "predeploy": "npm run build",
+          "deploy": "gh-pages -d dist"
       }
   }
