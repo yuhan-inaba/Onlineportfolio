@@ -1,41 +1,43 @@
-import { Link } from 'react-router';
-import { ImageWithFallback } from './figma/ImageWithFallback';
-import { useTheme } from '../contexts/ThemeContext';
-import { Moon, Sun } from 'lucide-react';
+import { Link } from "react-router";
+import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { useTheme } from "../contexts/ThemeContext";
+import { Moon, Sun } from "lucide-react";
 
 const people = [
   {
-    id: 'seanella-rose-cuenco',
-    name: 'Seanella Rose V. Cuenco',
-    image: 'https://raw.githubusercontent.com/yuhan-inaba/Onlineportfolio/main/src/components/seya.jpg',
+    id: "seanella-rose-cuenco",
+    name: "Seanella Rose V. Cuenco",
+    image: "https://i.postimg.cc/zGS1Y0B9/seya.jpg",
   },
   {
-    id: 'joecel-hann-labosta',
-    name: 'Joecel Hann R. Labosta',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+    id: "joecel-hann-labosta",
+    name: "Joecel Hann R. Labosta",
+    image: "https://i.postimg.cc/x1tnb62P/joecell.jpg",
   },
   {
-    id: 'froilan-johanan-balanon',
-    name: 'Froilan Johanan A. Balanon',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+    id: "froilan-johanan-balanon",
+    name: "Froilan Johanan A. Balanon",
+    image: "https://i.postimg.cc/7YwFMSmw/yuhan.jpg",
   },
   {
-    id: 'curein-paul-tegan',
-    name: 'Curein Paul W. Tegan',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+    id: "curein-paul-tegan",
+    name: "Curein Paul W. Tegan",
+    image: "https://i.postimg.cc/L69WZ28F/paul.jpg",
   },
   {
-    id: 'mc-criyun-pagnas',
-    name: 'Mc Criyun V. Pagnas',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+    id: "mc-criyun-pagnas",
+    name: "Mc Criyun V. Pagnas",
+    image: "https://i.postimg.cc/wMHG2d5v/maki.jpg",
   },
 ];
 
 export default function HomePage() {
   const { theme, toggleTheme } = useTheme();
-  
+
   return (
-    <div className={`min-h-screen ${theme === 'dark' ? 'bg-neutral-950 text-neutral-100' : 'bg-gray-50 text-gray-900'}`}>
+    <div
+      className={`min-h-screen ${theme === "dark" ? "bg-neutral-950 text-neutral-100" : "bg-gray-50 text-gray-900"}`}
+    >
       {/* Header */}
       <header className="py-12 px-6">
         <div className="max-w-7xl mx-auto">
@@ -44,22 +46,42 @@ export default function HomePage() {
             <button
               onClick={toggleTheme}
               className={`p-3 rounded-lg transition-all duration-300 ${
-                theme === 'dark'
-                  ? 'bg-neutral-900 hover:bg-neutral-800 text-violet-400 hover:shadow-lg hover:shadow-violet-500/20'
-                  : 'bg-white hover:bg-gray-100 text-violet-600 shadow-md hover:shadow-lg'
+                theme === "dark"
+                  ? "bg-neutral-900 hover:bg-neutral-800 text-violet-400 hover:shadow-lg hover:shadow-violet-500/20"
+                  : "bg-white hover:bg-gray-100 text-violet-600 shadow-md hover:shadow-lg"
               }`}
               aria-label="Toggle theme"
             >
-              {theme === 'dark' ? <Sun className="w-6 h-6" /> : <Moon className="w-6 h-6" />}
+              {theme === "dark" ? (
+                <Sun className="w-6 h-6" />
+              ) : (
+                <Moon className="w-6 h-6" />
+              )}
             </button>
           </div>
-          
+
           <div className="text-center">
             <h1 className="mb-4">
-              <span className={theme === 'dark' ? 'text-violet-400' : 'text-violet-600'}>Creative</span> Portfolio
+              <span
+                className={
+                  theme === "dark"
+                    ? "text-violet-400"
+                    : "text-violet-600"
+                }
+              >
+                Creative
+              </span>{" "}
+              Portfolio
             </h1>
-            <p className={theme === 'dark' ? 'text-neutral-400' : 'text-gray-600'}>
-              Explore the creative journeys of talented professionals
+            <p
+              className={
+                theme === "dark"
+                  ? "text-neutral-400"
+                  : "text-gray-600"
+              }
+            >
+              Explore the creative journeys of talented
+              professionals
             </p>
           </div>
         </div>
@@ -73,20 +95,22 @@ export default function HomePage() {
               <div
                 key={person.id}
                 className={`rounded-2xl p-6 border transition-all duration-300 flex flex-col hover:scale-105 ${
-                  theme === 'dark'
-                    ? 'bg-neutral-900 border-neutral-800 hover:border-violet-500/50 hover:shadow-lg hover:shadow-violet-500/20'
-                    : 'bg-white border-gray-200 hover:border-violet-400 shadow-md hover:shadow-xl hover:shadow-violet-400/20'
+                  theme === "dark"
+                    ? "bg-neutral-900 border-neutral-800 hover:border-violet-500/50 hover:shadow-lg hover:shadow-violet-500/20"
+                    : "bg-white border-gray-200 hover:border-violet-400 shadow-md hover:shadow-xl hover:shadow-violet-400/20"
                 }`}
               >
                 {/* Circular Portrait */}
                 <div className="mb-6 flex justify-center">
-                  <div className={`w-32 h-32 rounded-full overflow-hidden border-2 transition-all duration-300 ${
-                    theme === 'dark'
-                      ? 'border-violet-500/30 hover:border-violet-500'
-                      : 'border-violet-400/40 hover:border-violet-600'
-                  }`}>
+                  <div
+                    className={`w-32 h-32 rounded-full overflow-hidden border-2 transition-all duration-300 ${
+                      theme === "dark"
+                        ? "border-violet-500/30 hover:border-violet-500"
+                        : "border-violet-400/40 hover:border-violet-600"
+                    }`}
+                  >
                     <ImageWithFallback
-                      src="figma:asset/c58e59485fa5f78fd8bbd98161c08ef7b4ef603d.png"
+                      src={person.image}
                       alt={person.name}
                       className="w-full h-full object-cover"
                     />
@@ -94,17 +118,21 @@ export default function HomePage() {
                 </div>
 
                 {/* Name */}
-                <h3 className={`text-center mb-6 flex-1 ${theme === 'dark' ? 'text-neutral-100' : 'text-gray-900'}`}>
+                <h3
+                  className={`text-center mb-6 flex-1 ${theme === "dark" ? "text-neutral-100" : "text-gray-900"}`}
+                >
                   {person.name}
                 </h3>
 
                 {/* View Portfolio Button */}
                 <Link to={`/portfolio/${person.id}`}>
-                  <button className={`w-full py-3 rounded-lg transition-all duration-300 ${
-                    theme === 'dark'
-                      ? 'bg-violet-600 hover:bg-violet-500 text-white hover:shadow-lg hover:shadow-violet-500/50'
-                      : 'bg-violet-600 hover:bg-violet-700 text-white shadow-md hover:shadow-lg hover:shadow-violet-600/50'
-                  }`}>
+                  <button
+                    className={`w-full py-3 rounded-lg transition-all duration-300 ${
+                      theme === "dark"
+                        ? "bg-violet-600 hover:bg-violet-500 text-white hover:shadow-lg hover:shadow-violet-500/50"
+                        : "bg-violet-600 hover:bg-violet-700 text-white shadow-md hover:shadow-lg hover:shadow-violet-600/50"
+                    }`}
+                  >
                     View Portfolio
                   </button>
                 </Link>
