@@ -7,7 +7,7 @@ const people = [
   {
     id: 'seanella-rose-cuenco',
     name: 'Seanella Rose V. Cuenco',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+    image: 'https://raw.githubusercontent.com/yuhan-inaba/Onlineportfolio/main/src/components/seya.jpg',
   },
   {
     id: 'joecel-hann-labosta',
